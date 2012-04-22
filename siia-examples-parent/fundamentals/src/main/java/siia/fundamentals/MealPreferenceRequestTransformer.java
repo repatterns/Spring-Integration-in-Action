@@ -6,9 +6,9 @@ import javax.xml.transform.Source;
 
 public class MealPreferenceRequestTransformer {
 
-  public Source buildMealPreferenceUpdateRequest(MealPreference
+  public String buildMealPreferenceUpdateRequest(MealPreference
                                                      mealPreference) {
-    return new StringSource(
+    return new String(
         "<updateMealPreference>" +
             "<flightRef>" +
                mealPreference.getFlightReference() +
