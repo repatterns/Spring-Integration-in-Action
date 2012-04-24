@@ -38,7 +38,8 @@ public class ExpressionBasedHeaderEnricherTests {
         payload.addProfile(profile);
         Message<Passenger> passengerToTransform = MessageBuilder.withPayload(payload).build();
         input.send(passengerToTransform);
-        Message<Passenger> transformedPassenger = (Message<Passenger>) output.receive(0);
+        @SuppressWarnings("unchecked")
+		Message<Passenger> transformedPassenger = (Message<Passenger>) output.receive(0);
         assertEquals(transformedPassenger.getHeaders().get(MailHeaders.TO), EMAIL_ADDRESS);
     }
 

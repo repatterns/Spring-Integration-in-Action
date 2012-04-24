@@ -8,7 +8,7 @@
              xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/mail/spring-integration.xsd
        http://www.springframework.org/schema/integration/mail http://www.springframework.org/schema/integration/mail/spring-integration-mail.xsd
-       http://www.springframework.org/schema/integration/file http://www.springframework.org/schema/integration/mail/spring-integration-file.xsd
+       http://www.springframework.org/schema/integration/file http://www.springframework.org/schema/integration/file/spring-integration-file.xsd
        http://www.springframework.org/schema/integration/jms http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd">
 
     <gateway service-interface="siia.business.FlightStatusNotificationPublisher">

@@ -15,15 +15,15 @@ public class EmailHeaderEnricher {
                                @Headers Map<String, Object> headers) {
 
         MessageBuilder<Passenger> responseBuilder =
-            MessageBuilder.withPayload(passenger).copyHeaders(headers);
+            MessageBuilder.withPayload(passenger);
         Profile profile = passenger.getProfile();
         if (profile != null) {
             String emailAddress = profile.getEmailAddress();
             if (emailAddress != null) {
                 responseBuilder.setHeader(MailHeaders.TO, emailAddress);
             }
-
         }
+        
         return responseBuilder.build();
     }
 }
